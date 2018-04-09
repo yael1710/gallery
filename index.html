@@ -1,0 +1,54 @@
+<html lang="en"></html>
+<head>
+    <meta charset="utf-8">
+    <title>Gallery Demo</title>
+    <link rel="stylesheet" href="lightboxgallery.css">
+    <link rel="stylesheet" href="style.css">
+  
+    <script src="http://localhost:35729/livereload.js"></script>
+
+  </head>
+
+  
+
+<body>
+    <div class="header">
+        <div class="container">
+          <h1>Lightbox Gallery</h1>
+          <h2>A lightweight responsive jQuery lightbox gallery plugin.</h2>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="lightboxgallery-gallery clearfix">
+          <a class="lightboxgallery-gallery-item" target="_blank" href="rahul-anil.jpg" data-title="Rahul Anil" data-alt="Rahul Anil" data-desc="A lightweight jQuery lightbox gallery plugin.">
+            <div>
+              <img src="rahul-anil_thumb.jpg" title="Rahul Anil" alt="Rahul Anil">
+              <div class="lightboxgallery-gallery-item-content">
+                <span class="lightboxgallery-gallery-item-title">Rahul Anil</span>
+              </div>
+            </div>
+          </a>
+          <a class="lightboxgallery-gallery-item" target="_blank" href="noah-hinton.jpg" data-title="Noah Hinton" data-alt="Noah Hinton" data-desc="A lightweight jQuery lightbox gallery plugin.">
+            <div>
+              <img src="noah-hinton_thumb.jpg" title="Noah Hinton" alt="Noah Hinton">
+              <div class="lightboxgallery-gallery-item-content">
+                <span class="lightboxgallery-gallery-item-title">Noah Hinton</span>
+              </div>
+            </div>
+          </a>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+          <script src="lightboxgallery.js"></script>
+          <script type="text/javascript">
+          jQuery(function($) {
+            $(document).on('click', '.lightboxgallery-gallery-item', function(event) {
+              event.preventDefault();
+              $(this).lightboxgallery({
+                showCounter: true,
+                showTitle: true,
+                showDescription: true
+              });
+            });
+          });
+          </script>
+</body>
